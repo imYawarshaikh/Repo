@@ -38,7 +38,7 @@ public class HttpsClient{
   }
 
   private StringBuilder testIt(){
-     String https_url = "https://10.178.129.145:8090/ws/v1/cluster/metrics";
+     String https_url = "url";
      URL url;
      try {
 			
@@ -55,14 +55,14 @@ public class HttpsClient{
 	    HttpsURLConnection con = (HttpsURLConnection)url.openConnection();
 			
 	    
-	    String encoded = Base64.getEncoder().encodeToString(("bdadmin"+":"+"P1ym0uth1!").getBytes(StandardCharsets.UTF_8));  //Java 8
+	    String encoded = Base64.getEncoder().encodeToString(("user"+":"+"password").getBytes(StandardCharsets.UTF_8));  //Java 8
 	    con.setRequestProperty("Authorization", "Basic "+encoded);
 	    
 	    
 	    // Guard against "bad hostname" errors during handshake.
             con.setHostnameVerifier(new HostnameVerifier() {
                 public boolean verify(String host, SSLSession sess) {
-                    if (host.equals("10.178.129.145")) return true;
+                    if (host.equals("url")) return true;
                     else return false;
                 }
             });
