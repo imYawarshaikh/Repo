@@ -1,5 +1,18 @@
 Sample Codes
 
+docker run --name tomcat_csv_Exporter -v /home/y18/ywrfiles/TomcatDockerVol:/usr/local/tomcat/webapps/ -d -p 8081:8080 tomcat
+
+
+docker run --name prometheusDocker --link  tomcat_csv_Exporter:tomcat -p 9091:9090 -v /home/y18/ywrfiles/config/prometheus.yml:/etc/prometheus/prometheus.yml -d  prom/prometheus
+
+
+
+
+
+
+
+
+
 * http://www.mkyong.com/java/how-do-convert-java-object-to-from-json-format-gson-api/
 
 https://github.com/tolleiv/json-exporter
