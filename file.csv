@@ -1,0 +1,4 @@
+yarn_vcores,yarn_memory,Yarn_used_storage,max_vcores_allocated,PCT_max_vcores_allocated,nodemanagers_running,total_datanodes
+10000,16.53,175.72,28204,42678,56934,631
+20000,16.53,175.72,28204,42678,56934,631
+30456,16.53,175.72,28204,42678,56934,631
